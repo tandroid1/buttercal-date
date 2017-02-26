@@ -1,0 +1,28 @@
+{
+  "name": "buttercal-test",
+  "version": "0.0.1",
+  "description": "buttercal test rollup",
+  "keywords": [
+    "buttercal",
+    "buttercal-module"
+  ],
+  "license": "BSD-3-Clause",
+  "main": "build/buttercal-test.js",
+  "jsnext:main": "index",
+  "homepage": "https://github.com/tandroid1/d3-test",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tandroid1/d3-test.git"
+  },
+  "scripts": {
+    "pretest": "rm -rf build && mkdir build && rollup -f umd -n buttercal -o build/buttercal-test.js -- index.js",
+    "test": "tape 'test/**/*-test.js'",
+    "prepublish": "npm run test && uglifyjs build/buttercal-test.js -c -m -o build/buttercal-test.min.js",
+    "postpublish": "zip -j build/buttercal-test.zip -- LICENSE README.md build/buttercal-test.js build/buttercal-test.min.js"
+  },
+  "devDependencies": {
+    "rollup": "0.27",
+    "tape": "4",
+    "uglify-js": "2"
+  }
+}
