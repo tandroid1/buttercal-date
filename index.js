@@ -1,1 +1,1 @@
-export {default as foo} from "./src/test";
+export {default as date} from "./src/date";

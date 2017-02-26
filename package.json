@@ -1,24 +1,24 @@
 {
-  "name": "buttercal-test",
+  "name": "buttercal-date",
   "version": "0.0.1",
-  "description": "buttercal test rollup",
+  "description": "buttercal date rollup test",
   "keywords": [
     "buttercal",
     "buttercal-module"
   ],
   "license": "BSD-3-Clause",
-  "main": "build/buttercal-test.js",
+  "main": "build/buttercal-date.js",
   "jsnext:main": "index",
-  "homepage": "https://github.com/tandroid1/d3-test",
+  "homepage": "https://github.com/tandroid1/d3-date",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tandroid1/d3-test.git"
+    "url": "https://github.com/tandroid1/d3-date.git"
   },
   "scripts": {
-    "pretest": "rm -rf build && mkdir build && rollup -f umd -n buttercal -o build/buttercal-test.js -- index.js",
-    "test": "tape 'test/**/*-test.js'",
-    "prepublish": "npm run test && uglifyjs build/buttercal-test.js -c -m -o build/buttercal-test.min.js",
-    "postpublish": "zip -j build/buttercal-test.zip -- LICENSE README.md build/buttercal-test.js build/buttercal-test.min.js"
+    "pretest": "rm -rf build && mkdir build && rollup -f umd -n buttercal -o build/buttercal-date.js -- index.js",
+    "test": "tape 'test/**/*-date.js'",
+    "prepublish": "npm run test && uglifyjs build/buttercal-date.js -c -m -o build/buttercal-date.min.js",
+    "postpublish": "zip -j build/buttercal-date.zip -- LICENSE README.md build/buttercal-date.js build/buttercal-date.min.js"
   },
   "devDependencies": {
     "rollup": "0.27",
